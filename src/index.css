@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "gallient";
+  src: url("../public/fonts/Gallient.ttf");
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(54, 54, 54);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.gallient-font {
+  font-family: "gallient", sans-serif;
+}
+
+/* Import the font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* Define a class to use the font */
+.dm-sans-font {
+  font-family: "DM Sans", sans-serif;
+}
+
+.text-split {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+}
+
+.text-split div {
+  grid-column: auto;
+}
+
+#grid:hover {
+  animation: grid-ani linear 1.5s;
+}
+
+.hide-scrollbar-webkit {
+  overflow: auto;
+}
+
+.hide-scrollbar-webkit::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* For Firefox */
+.hide-scrollbar-moz {
+  scrollbar-width: thin; /* or 'none' for no scrollbar at all */
+  scrollbar-color: transparent transparent;
+}
+
+@keyframes grid-ani {
+  0% {
+    transform: translateY(-1vh);
+  }
+  50% {
+    transform: translateY(1vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
