@@ -79,3 +79,7 @@
     transform: rotate(360deg);
   }
 }
+
+::selection {
+  @apply bg-neutral-300;
+}

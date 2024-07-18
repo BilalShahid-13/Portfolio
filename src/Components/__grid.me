@@ -1,0 +1,58 @@
+import React, { useEffect, useState } from "react";
+import Data from "../config/Data";
+
+const Grid = ({ sendDataToParent }) => {
+  const { Temp } = Data;
+  const [indexHover, setindexHover] = useState(null);
+
+  return (
+    <>
+      <div>
+        {Temp.map((items, index) => (
+          <div
+            className={`flex flex-col ${
+              index % 3 === 1
+                ? "justify-start items-start"
+                : "justify-end items-end"
+            }`}
+            key={index}
+          >
+            <div
+              className="bg-blue-50 rounded-md mx-2 hover:bg-blue-100 ease-linear duration-500 
+             transition-all cursor-pointer hover:shadow-md hover:shadow-blue-300 w-1/2"
+              id="grid"
+              onClick={() => {
+                sendDataToParent(items.title);
+                setindexHover(items.title);
+              }}
+            >
+              <img
+                src={items.sampleimg}
+                className="px-8 h-full rounded-md drop-shadow-md"
+              />
+            </div>
+            <div
+              className={`flex flex-col ${
+                index % 2 === 1
+                  ? "justify-start items-center"
+                  : "justify-end items-center"
+              } w-1/2`}
+            >
+              <h2 className="dm-sans-font text-2xl font-bold text-zinc-600">
+                {items.title}
+              </h2>
+              <p
+                className="dm-sans-font text-sm font-light tracking-wide 
+              leading-snug px-4 text-justify text-zinc-500"
+              >
+                {items.des}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default Grid;

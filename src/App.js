@@ -1,19 +1,20 @@
 import "./App.css";
-import {
-  // HashRouter as Router,
-  Routes,
-  Route,
-  // Link,
-  HashRouter,
-} from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+  }, []);
+
   return (
     <>
       <HashRouter>
