@@ -90,13 +90,13 @@ const About = () => {
 
         <div className="space-y-7 my-[17%]">
           <h2
-            className="gallient-font md:text-6xl lg:text-[16vw] 
+            className="gallient-font md:text-6xl lg:text-[16vw]
             text-zinc-700  uppercase max-sm:text-[17vw]"
           >
             Featured
           </h2>
           <h2
-            className="gallient-font md:text-5xl lg:text-[12vw] 
+            className="gallient-font md:text-5xl lg:text-[12vw]
             text-zinc-500 uppercase text-right max-sm:text-[12vw]"
           >
             servies*
@@ -104,15 +104,15 @@ const About = () => {
         </div>
 
         <div
-          className="flex flex-col gap-4 
+          className="flex flex-col gap-4
         "
         >
           {services.map((items, index) => (
             <div
               key={index}
-              className="bg-neutral-100 p-3 rounded-lg 
-              flex flex-col max-md:w-1/2 
-              max-md:translate-x-[50%] 
+              className="bg-neutral-100 p-3 rounded-lg
+              flex flex-col max-md:w-1/2
+              max-md:translate-x-[50%]
               max-sm:w-[80%] max-sm:translate-x-[13%]
               max-sm:justify-center max-sm:items-center"
             >
@@ -138,6 +138,8 @@ const About = () => {
             Contact*
           </Link>
         </div>
+
+
       </div>
     </>
   );
