@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Data from "../config/Data";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectjsShow = ({ sendDataToParent, index }) => {
   const { Tmp } = Data;
@@ -82,11 +83,16 @@ const ProjectjsShow = ({ sendDataToParent, index }) => {
                 >
                   {items.des}
                 </p>
+                {items.link ? <div className="flex flex-row justify-center items-center gap-2 hover:font-semibold">
+                  <FaExternalLinkAlt className="text-blue-500" />
+                  <a target="_blank" className="text-blue-500 no-underline"
+                    href={items.link}>Show Project</a>
+                </div> : null}
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 };
