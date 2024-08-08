@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Data from "../config/Data";
 import ProjectjsShow from "./ProjectjsShow";
+import Packages from "./Packages";
 
 const Grid = ({ sendDataToParent }) => {
   const { Tmp } = Data;
@@ -28,11 +29,12 @@ const Grid = ({ sendDataToParent }) => {
             id="card"
           >
             <div
-              className="bg-blue-50 rounded-md mx-2
+              className={`bg-blue-50 rounded-md mx-2
                   hover:bg-blue-100 ease-linear duration-500
               transition-all cursor-pointer hover:shadow-md
-               hover:shadow-blue-300 w-1/2 flex flex-col"
-              id="grid"
+               hover:shadow-blue-300 w-1/2
+               ${index_ === 0 ? 'lg:w-[20vw]' : 'w-1/2'} flex flex-col"
+              id="grid`}
               onClick={() => {
                 sendDataToParent(index_);
                 setclick_index(index_);
@@ -43,7 +45,7 @@ const Grid = ({ sendDataToParent }) => {
               <img
                 src={itemss.sampleimg}
                 alt={itemss.sampleimg}
-                className="px-8 h-full rounded-md drop-shadow-md"
+                className="px-8 h-full  rounded-md drop-shadow-md"
               />
             </div>
             {/* title & des */}

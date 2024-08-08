@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import Packages from "./Packages";
 
 const Tmp = ({ title, id, des }) => {
   useEffect(() => {
@@ -51,7 +52,7 @@ const Tmp = ({ title, id, des }) => {
               {id}
             </span>
             <h2
-              className="font-normal max-md:text-[80px] 
+              className="font-normal max-md:text-[80px]
             uppercase text-[140px] max-sm:text-[50px]"
             >
               {des}
