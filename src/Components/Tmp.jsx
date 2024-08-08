@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import Packages from "./Packages";
 
 const Tmp = ({ title, id, des }) => {
   useEffect(() => {

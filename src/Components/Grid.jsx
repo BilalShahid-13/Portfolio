@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Data from "../config/Data";
 import ProjectjsShow from "./ProjectjsShow";
-import Packages from "./Packages";
 
 const Grid = ({ sendDataToParent }) => {
   const { Tmp } = Data;
