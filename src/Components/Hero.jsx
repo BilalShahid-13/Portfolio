@@ -38,17 +38,17 @@ const Hero = () => {
           id="hero"
         >
           <h1
-            className="flex flex-row justify-center items-center 
+            className="flex flex-row justify-center items-center
       gap-1 uppercase text-[180px] max-md:text-4xl gallient-font text-zinc-600 drop-shadow-2xl"
           >
             Crea
             <div className="relative w-[20vw] h-[50vh] max-md:w-24 max-md:h-28 mx-4">
               <img
-                src="https://bilalshahid-13.github.io/Portfolio/file.jpg"
+                src="https://bilalshahid-13.github.io/Portfolio/favicon.jpg"
                 alt=""
                 className="bg-[#DCDCDC] drop-shadow-2xl
             absolute inset-0 w-full h-full object-cover
-            rounded-tr-full rounded-tl-full rounded-br-full 
+            rounded-tr-full rounded-tl-full rounded-br-full
             rounded-bl-md"
               />
             </div>
@@ -86,7 +86,7 @@ const Hero = () => {
           <img
             src="https://bilalshahid-13.github.io/Portfolio/about.png"
             alt=""
-            className="w-[60vw] h-[100vh] max-md:mx-6  
+            className="w-[60vw] h-[100vh] max-md:mx-6
             max-md:w-[70vw] max-md:h-[80vh]
              max-sm:w-[60vw] max-sm:h-[70%]"
           />
